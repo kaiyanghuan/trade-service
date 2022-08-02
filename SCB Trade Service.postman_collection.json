@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "1ca6ffbf-dbcb-49d2-92a5-5d374f2b2ca3",
+		"name": "SCB Trade Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Product Csv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "multipartFile",
+							"type": "file",
+							"src": "/C:/projects/TradeService/src/main/resources/product.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/products/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enrich Trade Csv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "multipartFile",
+							"type": "file",
+							"src": "/C:/projects/TradeService/src/main/resources/trade.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/enrich",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"enrich"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

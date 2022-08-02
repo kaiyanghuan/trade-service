@@ -1,0 +1,6 @@
+As project task provided were general. I have made several following assumptions
+
+1. Products Data are also uploaded via a secondary API (not stated in the requirement) -> Thus, API was created to simulate this process
+2. Products Data are stored in some sort of database -> Thus, using h2 db to simulate database and using flyway to help create table
+3. Cache like Redis is available -> Thus, simulated this using concurrentHashMap in productService
+4. Validation should not be restricted to only Trade Date. Product Id (BigInteger), Price (BigDecimal) should also be validated and rows be dropped if any of them were found invalid.
